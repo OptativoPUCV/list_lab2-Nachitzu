@@ -36,21 +36,19 @@ return lista;
 }
 
 void * firstList(List * list) {
-  List *lista = (List*) malloc(sizeof(List));
-  if (lista->head == NULL){
+  if (list->head == NULL){
     return NULL;
   }
-  lista->head = lista->current;
-  return(void*)lista->head->data;
+  list->head = list->current;
+  return(void*)list->head->data;
 }
 
 void * nextList(List * list) {
-  List *lista = (List*) malloc(sizeof(List));
-  if (lista->current->next == NULL){
+  if (list->current->next == NULL){
     return NULL;
   }
-  lista->current = lista->current->next;
-  return(void*)lista->current->data;
+  list->current = list->current->next;
+  return(void*)list->current->data;
 }
 
 void * lastList(List * list) {
