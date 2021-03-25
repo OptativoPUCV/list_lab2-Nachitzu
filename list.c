@@ -36,7 +36,12 @@ return lista;
 }
 
 void * firstList(List * list) {
+  List *lista = (List*) malloc(sizeof(List));
+  if (lista->head == NULL){
     return NULL;
+  }
+  lista->head = lista->current;
+  return lista->head;
 }
 
 void * nextList(List * list) {
