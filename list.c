@@ -63,8 +63,8 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, const void * data) {
+  list->head = createNode(data);
   list->current = list->head;
-  list->current = createNode(data);
   list->current->next = NULL;
 }
 
