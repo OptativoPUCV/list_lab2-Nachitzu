@@ -87,8 +87,7 @@ void pushCurrent(List * list, const void * data) {
   if(list->current != NULL){
    list->head->next = newNode;
    newNode->prev = list->head;
-   list->tail = newNode;
-   list->tail->next = 0;
+   list->tail->prev = newNode;
   }
   else{
     printf(" list->current es NULL");
