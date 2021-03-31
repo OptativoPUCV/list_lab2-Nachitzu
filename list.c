@@ -84,14 +84,15 @@ void pushBack(List * list, const void * data) {
 
 void pushCurrent(List * list, const void * data) {
   Node *newNode = createNode(data);
-  if(list->current != NULL){
+  if(list->current == list->head){
    list->head->next = newNode;
-   newNode->prev = list->head;
    list->tail = newNode;
-   list->tail->next = list->current;
+  }
+  else if(list->current == list->tail){
+    list->tail->next = newNode;
   }
   else{
-    printf(" list->current es NULL");
+    list->current->next = newNode;
   }
 }
 
