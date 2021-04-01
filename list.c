@@ -124,7 +124,7 @@ void * popCurrent(List * list) {
     list->current->next->prev = list->current->prev;
     list->current->prev->next = list->current->next;
   }
-  return(void*) aux->data;
+  return(void*) (aux->data);
 
 }
 
