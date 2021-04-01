@@ -422,3 +422,9 @@ Thu Apr  1 00:33:52 UTC 2021:
  1 file changed, 2 insertions(+), 1 deletion(-)
  tests:  0|0
 eac34ab
+Thu Apr  1 00:37:48 UTC 2021: 
+ list.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+ tests:  11|1
+total_score: 55/70
+7dd3316
